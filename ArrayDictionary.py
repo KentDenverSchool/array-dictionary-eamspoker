@@ -1,12 +1,17 @@
 import copy
 class ArrayDictionary:
+    
     def __init__(self):
         self.keys = []
         self.values = []
+    
     #add an key-value pair to the dictionary
     def put(self, key, value):
-        self.keys.append(key)
-        self.values.append(value)
+        if key in keys:
+            self.values[self.keys.index(key)] = value
+        else:
+            self.keys.append(key)
+            self.values.append(value)
         
     #get the value associated with a given key
     def get(self, key):
@@ -15,6 +20,7 @@ class ArrayDictionary:
     #remove a key-value pair and return its value
     def remove(self, key):
         value = self.values[self.keys.index(key)]
+        self.values.remove(value)
         self.values.remove(key)
         return value
 
