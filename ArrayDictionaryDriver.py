@@ -12,8 +12,10 @@ if __name__ == "main":
     results += dictionary.size() + "isEmpty for empty constructor. Expected: true Actual: " +
         dictionary.size()
 
-    #put/get/contains test
+    #put/contains/get test
     dictionary.put("key1", "value1")
+
+    results += dictionary.contains
 
     
                 
