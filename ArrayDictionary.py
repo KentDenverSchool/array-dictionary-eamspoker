@@ -7,7 +7,7 @@ class ArrayDictionary:
     
     #add an key-value pair to the dictionary
     def put(self, key, value):
-        if key in keys:
+        if key in self.keys:
             self.values[self.keys.index(key)] = value
         else:
             self.keys.append(key)
@@ -19,10 +19,13 @@ class ArrayDictionary:
 
     #remove a key-value pair and return its value
     def remove(self, key):
-        value = self.values[self.keys.index(key)]
-        self.values.remove(value)
-        self.values.remove(key)
-        return value
+        if self.contains(key):
+            value = self.values[self.keys.index(key)]
+            self.values.remove(value)
+            self.keys.remove(key)
+            return value
+        else:
+            return null
 
     #returns true if the given key has an associated value
     def contains(self, key):
@@ -31,7 +34,7 @@ class ArrayDictionary:
 
     #returns true if the dictionary is empty
     def isEmpty(self):
-       return not keys and not values
+       return not self.keys and not self.values
     
 
     #returns the number of key-value pairs in the dictionary
@@ -39,11 +42,11 @@ class ArrayDictionary:
         return len(self.keys)
 
     #returns a list of keys
-    def keys(self):
+    def listKeys(self):
         return copy.deepcopy(self.keys)
 
     #returns a list of values
-    def values(self):
+    def listValues(self):
         return copy.deepcopy(self.values)
 
 

@@ -28,10 +28,10 @@ boolean isEmpty()
 int size()
 
 //returns a Collection¹ of keys
-Collection<E> keys()
+Collection<E> listKeys()
 
 //returns a Collection of values
-Collection<T>  values()
+Collection<T>  listValues()
 
 ```
 1. [Collection](https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html)

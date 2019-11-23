@@ -1,0 +1,32 @@
+_________ArrayDictionary Tests_________
+
+Tests in format Test. Expected: Actual: passed:true/false
+
+True isEmpty for empty constructor. Expected: true Actual: True
+True size for empty constructor. Expected: 0 Actual: 0
+True Contains. Expected true: Actual: True
+True Contains (not added key). Expected: false Actual: False
+True get. Expected: value1 Actual: value1
+True isEmpty. Expected: false Actual: False
+True size. Expected: 1 Actual: 1
+
+2nd add:
+True contains added key. Expected: false Actual: True
+True get added value. Expected: value2 Actual: value2
+True isEmpty. Expected: false Actual: False
+True size. Expected: 2 Actual: 2
+
+True contains  added key. Expected true: Actual: True
+True get changed value. Expected: value3 Actual: value3
+True isEmpty. Expected: false Actual: False
+True size. Expected: 2 Actual: 2
+True doesn't contain removed key. Expected false: Actual: False
+True still contains added key. Expected: true Actual: True
+True get value. Expected: value3 Actual: value3
+True isEmpty for empty constructor. Expected: false Actual: False
+True size. Expected: 1 Actual: 1
+True doesn't contain removed key. Expected false: Actual: False
+False isEmpty for empty constructor. Expected: false Actual: True
+True size. Expected: 0 Actual: 0
+True still contains key. Expected: true Actual: True
+True still contains value. Expected: true Actual: True
