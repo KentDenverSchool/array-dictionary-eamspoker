@@ -1,0 +1,39 @@
+_________ArrayDictionary Tests_________
+
+Tests in format Test. Expected: Actual: passed:true/false
+
+True isEmpty for empty constructor. Expected: true Actual: True
+True size for empty constructor. Expected: 0 Actual: 0
+
+
+Put 2 key values in the dictionary, change the value of one by putting a new value for the old key
+True Contains. Expected true: Actual: True
+True Contains (not added key). Expected: false Actual: False
+True get. Expected: value1 Actual: value1
+True isEmpty. Expected: false Actual: False
+True size. Expected: 1 Actual: 1
+2nd add:
+True contains added key. Expected: false Actual: True
+True get added value. Expected: value2 Actual: value2
+True isEmpty. Expected: false Actual: False
+True size. Expected: 2 Actual: 2
+Change 2nd value:
+True contains added key. Expected true: Actual: True
+True get changed value. Expected: value3 Actual: value3
+True isEmpty. Expected: false Actual: False
+True size. Expected: 2 Actual: 2
+
+
+Remove the 2 values from the dictionary, check isEmptyTrue doesn't contain removed key. Expected false: Actual: False
+True still contains added key. Expected: true Actual: True
+True get value. Expected: value3 Actual: value3
+True isEmpty for empty constructor. Expected: false Actual: False
+True size. Expected: 1 Actual: 1
+True doesn't contain removed key. Expected false: Actual: False
+True isEmpty. Expected: true Actual: True
+True size. Expected: 0 Actual: 0
+
+
+Get keys and values list, modify lists and see if the instance data of the dictionary is modified.
+True still contains key. Expected: true Actual: True
+True still contains value. Expected: true Actual: True
