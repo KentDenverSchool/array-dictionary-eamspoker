@@ -21,11 +21,11 @@ class ArrayDictionary:
     def remove(self, key):
         if self.contains(key):
             value = self.values[self.keys.index(key)]
-            self.values.remove(value)
+            del(self.values[self.keys.index(key)])
             self.keys.remove(key)
             return value
         else:
-            return null
+            return None
 
     #returns true if the given key has an associated value, takes in a key
     def contains(self, key):

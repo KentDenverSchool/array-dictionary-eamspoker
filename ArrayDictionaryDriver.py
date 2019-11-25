@@ -43,16 +43,19 @@ results += str(dictionary.size() == 2) + " size. Expected: 2 Actual: " + str(dic
 #remove/contains/isEmpty test
 
 results += "\nRemove the 2 values from the dictionary, check isEmpty"
-dictionary.remove("key1")
+#change it to same value, to check remove
+dictionary.put("key3", "value1")
+dictionary.remove("key3")
 
 #check if it removed value, still contains not removed value, size, isEmpty
-results += str(not dictionary.contains("key1")) + " doesn't contain removed key. Expected false: Actual: " + str(dictionary.contains("key1")) + "\n"
-results += str(dictionary.contains("key2")) + " still contains added key. Expected: true Actual: " + str(dictionary.contains("key2")) + "\n"
-results += str(dictionary.get("key2") == "value3") + " get value. Expected: value3 Actual: " + str(dictionary.get("key2") + "\n")
+results += str(not dictionary.contains("key3")) + " doesn't contain removed key. Expected false: Actual: " + str(dictionary.contains("key1")) + "\n"
+results += str(dictionary.contains("key1")) + " still contains added key. Expected: true Actual: " + str(dictionary.contains("key2")) + "\n"
+results += str(dictionary.get("key1") == "value1") + " get value. Expected: value1 Actual: " + str(dictionary.get("key2") + "\n")
 results += str(not dictionary.isEmpty()) + " isEmpty for empty constructor. Expected: false Actual: " + str(dictionary.isEmpty()) + "\n"
-results += str(dictionary.size() == 1) + " size. Expected: 1 Actual: " + str(dictionary.size()) + "\n"
+results += str(dictionary.size() == 2) + " size. Expected: 1 Actual: " + str(dictionary.size()) + "\n"
 
 dictionary.remove("key2")
+dictionary.remove("key1")
 #checked if it removed the value, size, isEmpty
 results += str(not dictionary.contains("key2")) + " doesn't contain removed key. Expected false: Actual: " + str(dictionary.contains("key2")) + "\n"
 results += str(dictionary.isEmpty()) + " isEmpty. Expected: true Actual: " + str(dictionary.isEmpty()) + "\n"
