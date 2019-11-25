@@ -67,13 +67,13 @@ dictionary.put("key3", "value3")
 
 #check if editing the copy will affect the instance data
 results += "\nGet keys and values list, modify lists and see if the instance data of the dictionary is modified.\n"
-keyList = dictionary.listKeys()
+keyList = dictionary.getKeys()
 keyList.remove("key1")
 results += str(dictionary.contains("key1")) + " still contains key. Expected: true Actual: " + str(dictionary.contains("key1")) + "\n"
 
-valuesList = dictionary.listValues()
+valuesList = dictionary.getValues()
 valuesList.remove("value1")
-values2 = dictionary.listValues()
+values2 = dictionary.getValues()
 results += str("value1" in values2) + " still contains value. Expected: true Actual: " + str(dictionary.contains("key1")) + "\n"
 
 

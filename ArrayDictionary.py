@@ -42,11 +42,11 @@ class ArrayDictionary:
         return len(self.keys)
 
     #returns a list of keys, no parameters
-    def listKeys(self):
+    def getKeys(self):
         return copy.deepcopy(self.keys)
 
     #returns a list of values, no parameters
-    def listValues(self):
+    def getValues(self):
         return copy.deepcopy(self.values)
 
 
